@@ -4,7 +4,7 @@ public class Bear {
   private String name;
   private ArrayList<Edible> belly;
 
-  public Bear(String name){
+  public Bear(String name) {
     this.name = name;
     this.belly = new ArrayList<Edible>();
   }
@@ -31,6 +31,14 @@ public class Bear {
       return belly.remove(0);
     }
     return null;
+  }
+
+  public int totalNutrition() {
+    int total = 0;
+    for (Edible num : belly) {
+      total += num.nutritionalValue();
+    }
+    return total;
   }
 
 }

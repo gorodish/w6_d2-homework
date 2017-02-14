@@ -78,6 +78,9 @@ public class BearTest {
 
   @Test
   public void hasTotalNutritionalValue() {
-
+    bear.eat(salmon);
+    bear.eat(human);
+    bear.eat(chicken);
+    assertEquals(800, bear.totalNutrition());
   }
 }
